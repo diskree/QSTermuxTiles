@@ -1,0 +1,59 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-permission android:name="com.termux.permission.RUN_COMMAND" />
+    <queries>
+        <package android:name="com.termux" />
+    </queries>
+
+    <application
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:extractNativeLibs="false"
+        android:icon="@null"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:testOnly="true">
+        <service
+            android:name=".WOLWorkspaceScriptTile"
+            android:exported="true"
+            android:icon="@drawable/workspace"
+            android:label="@string/tile_wol_hyperpc_volt"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".ShutdownWorkspaceOverSSHScriptTile"
+            android:exported="true"
+            android:icon="@drawable/workspace"
+            android:label="@string/tile_shutdown_hyperpc_volt_over_ssh"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".AdbConnectOverSSHScriptTile"
+            android:exported="true"
+            android:icon="@drawable/adb_connect_over_ssh"
+            android:label="@string/tile_adb_connect_over_ssh"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".OpenPhoneRadioInfoScriptTitle"
+            android:exported="true"
+            android:icon="@drawable/open_phone_radio_info"
+            android:label="@string/open_phone_radio_info"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>
