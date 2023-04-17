@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">QS Tiles</string>
-    <string name="tile_wol_hyperpc_volt">WOL HyperPC Volt</string>
-    <string name="tile_shutdown_hyperpc_volt_over_ssh">Shutdown HyperPC Volt</string>
-    <string name="tile_adb_connect_over_ssh">ADB connect</string>
+    <string name="tile_wol_workspace">WOL Workspace</string>
+    <string name="tile_shutdown_workspace">Shutdown Workspace</string>
+    <string name="tile_adb_connect_over_ssh">ADB Connect</string>
     <string name="open_phone_radio_info">Radio Info</string>
 </resources>
